@@ -54,7 +54,7 @@ app.post('/webhooks', function (req, res) {
   res.sendStatus(200)
 })
 */  
-
+const app = express();
 app.set('port', (process.env.PORT || 5000))
 
 // parse application/x-www-form-urlencoded
