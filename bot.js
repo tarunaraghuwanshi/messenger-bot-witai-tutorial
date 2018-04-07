@@ -35,8 +35,10 @@ var read = function (sender, message, reply) {
 	if (message === 'hello') {
 		// Let's reply back hello
 		message = 'Hello yourself! I am a chat bot. You can say "show me pics of corgis"'
+		console.log('inside the read of bot when hello comes');
 		reply(sender, message)
 	} else {
+		console.log('inside the read of bot when hello does not comes');
 		// Let's find the user
 		var sessionId = findOrCreateSession(sender)
 		// Let's forward the message to the Wit.ai bot engine

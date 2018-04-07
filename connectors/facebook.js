@@ -76,7 +76,7 @@ var newMessage = function (recipientId, msg, atts, cb) {
 		}
 	}
 	opts.form.message = message
-
+	console.log('inside the newMessage of FB');
 	newRequest(opts, function (err, resp, data) {
 		if (cb) {
 			cb(err || data.error && data.error.message, data)
@@ -96,6 +96,7 @@ var getMessageEntry = function (body) {
 						Array.isArray(body.entry[0].messaging) &&
 						body.entry[0].messaging.length > 0 &&
 						body.entry[0].messaging[0]
+	console.log('inside the getMessageEntry of FB' + val);
 	return val || null
 }
 
